@@ -1,0 +1,1224 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+  font-size: 20px;
+  box-sizing: inherit;
+}
+
+*,*:before,*:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: antiquewhite;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Neometric";
+    background-image: url(../img/fon.png);
+    background-repeat: no-repeat;
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+
+
+/* Шапка */
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(12, 12, 17, 0.63);
+    border-radius: 0px 0px 12px 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.1px);
+    -webkit-backdrop-filter: blur(10.1px);
+    border: 1px solid rgba(12, 12, 17, 0.3);
+    z-index: 2;
+}
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.header__logo {
+    z-index: 3;
+    text-decoration: none;
+}
+
+.header__logo p{
+    font-family:"Extechchop Condensed";
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+    -webkit-transition: all 1s ease;
+    transition: all 0.7s ease; /* Время изменения цвета */
+}
+
+.header__logo p:hover{
+    color: #682179;
+}
+
+.header__list{
+    display: flex;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.header__list li{
+    list-style: none;
+    margin: 0 0 0 25px;
+}
+
+.header__link {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    color:antiquewhite;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.7s ease; /* Время изменения цвета */
+}
+
+.header__link:hover{
+    color: #9043d5;
+}
+
+/* Конец шапки */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+}
+
+.glass{
+    width: 325px;
+    height: 350px;
+    background: rgba(17, 17, 24, 0.69);
+    border-radius: 18px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    transform: translateY(-20px);
+}
+
+.product-card {
+    display: flex;
+    flex: 1 0 250px;
+    flex-direction: column;
+    align-items: center;
+    width: 325px;
+    height: 350px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+
+.line {
+    border-top: 0.1em groove rgb(134, 126, 126);
+    width: 225px;
+    transform: translateX(45px);
+    padding: 0px 0px 0px 0px;
+  }
+
+.product-card p{
+    color: #ffffff;
+    margin: 24px 0px 20px 0px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.product-card img {
+    width: 320px;
+    height: 300px;
+    border-radius: 18px;
+}
+
+.product-details {
+    padding: 20px 40px 40px 40px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.product-price {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.buy-button {
+    background: #682179;
+    font-family: 'Neometric';
+    box-shadow: 0px 10px 25px rgba(225, 29, 196, 0.4);
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+            transition: all 0.8s ease; /* Время изменения цвета */
+}
+
+.buy-button:hover{
+    background-color: #450c49; /* Меняем цвет ссылки */
+}
+
+/* Контакты и т.д */
+.networks{
+    display: table-cell; 
+    width: 500px;
+    vertical-align: middle;
+    height: 100px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+}
+
+.img-net{
+    text-align: left;
+    height: 3rem;
+    padding: 0px 20px 0px 0px;
+}
+
+.change-color-link{
+    color: #682179; /* Цвет ссылки */
+    font-size: 1em;
+    font-weight:normal;
+    padding: 20px 10px;
+    line-height: 1;
+    text-decoration: none;
+    -webkit-transition: all 1s ease;
+            transition: all 1s ease; /* Время изменения цвета */
+}
+
+.change-color-link:hover{
+    color: #893aaf; /* Меняем цвет ссылки */
+}
+
+.contacts-box 
+{
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  width: 760px;
+  color: #ffffff;
+  padding: 20px;
+  line-height: 1.2;
+}
+/* Конец блока контактов */
+
+
+/* Инфа вначале каталога */
+.katalog-start p{
+    color: antiquewhite;
+    text-align: center;
+}
+
+.katalog-start h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+/* Конец инфы каталога */
+
+/* Футер */
+
+.footer{
+    text-align: center; 
+    padding: 35px 0px 0px 0px;
+    height: 50px;
+    color: #ffffff;
+}
+/* Конец футера */
+
+
+
+.acor-container {
+    margin: 20px 0;
+}
+
+.acor-container .acor-body {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    height: 0;
+    max-width: 800px;
+    color: rgba(0, 0, 0, 0);
+    line-height: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-family: Verdana, sans-serif; 
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 10px 16px rgba(0,0,0,0.2);
+}
+.acor-container .acor-body p {
+    margin: 0 0 10px;
+}
+
+.acor-container label {
+    cursor: pointer;
+    border:1px solid #682179;
+    display: block;
+    padding: 15px 20px;
+    width: 800px;
+    color: #BFE2FF;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: Verdana, sans-serif;   
+    font-size: 22px;
+    margin: 0 0 15px;
+    transition: color .35s;
+}
+.acor-container label:hover {
+    color: #FFF;
+}
+.acor-container input{
+    display: none;
+}
+.acor-container label:before {
+    content: '\276F';
+    float: right;
+}
+.acor-container input:checked + label {
+    background-color: #682179;
+    color: #FFF;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
+}
+.acor-container input:checked + label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+.acor-container input:checked + label + .acor-body {
+    height: auto;
+    margin-top: -5px;
+    color: #fbfbfb;
+    padding: 20px 30px 10px;
+}
+
+
+/* Витрина */
+
+.container-vit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text {
+    flex: 1;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .image {
+    flex: 1;
+    text-align: center;
+    transform: translateX(0px);
+    animation: float 8s ease-out infinite;
+  }
+  
+  .img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.popul-game{
+    padding: 30px;
+    width: 1980px;
+    height: 100px;
+    min-width: 0%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.popul-game p{
+    padding-top: 12px;
+    flex: 1;
+    color: #FFF;
+    font-size: 40px;
+}
+
+.container-popul{
+    margin: 0px auto;
+    padding: 0px 10px;
+    max-width: 1180px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+  
+.btn-flare {
+    background: #9043d5;
+    font-family: 'Roboto';
+    box-shadow: 0px 10px 25px rgba(238, 238, 239, 0.4);
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 50px;
+    -webkit-transition: all 1s ease;
+        transition: all 0.8s ease; /* Время изменения цвета */
+}
+.btn-flare:hover{
+    -webkit-transform: scale(1.05, 1.07);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1.05, 1.07);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+}
+
+.btn-flare .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    transform: skewX(-45deg);
+    animation: flareAnimation;
+    left: -200%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 4s infinite linear;
+}
+
+@keyframes flareAnimation {
+    0% {
+        left: -200%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+.btn-flare a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+/* Конец витрины */
+
+.whynot{
+    padding: 30px;
+    width: 1980px;
+    height: 100px;
+    min-width: 0%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.whynot p{
+    padding-left: 15px;
+    flex: 1;
+    color: #FFF;
+    font-size: 40px;
+}
+
+.header_burger{
+    display: none;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+
+.content-index{
+    padding: 180px 0px 75px 0px;
+}
+
+.content-katalog{
+    padding: 120px 0px 0px 0px;
+}
+
+.content-faq{
+    padding: 140px 0px 0px 0px;
+}
+
+.content-faq p{
+    font-size: 35px;
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.blink {
+    color: #682179;
+    animation: blinkMe 3s linear infinite;
+}
+
+@keyframes blinkMe {
+    0% {
+     opacity: 0;
+    }
+    50% {
+     opacity: 1;
+    }
+    100% {
+     opacity: 0;
+    }
+}
+
+.content-support{
+    padding: 130px 0px 0px 0px;
+}
+
+.content-support p{
+    font-size: 40px;
+    color: #ffffff;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/* Описание игр */
+
+.img-games{
+    width: 350px;
+    height: 225px;
+    padding-right: 25px;
+}
+
+.con-img-games{
+    float:left;
+    width: 350px;
+}
+
+.text-games p{
+    color: #fff;
+    text-align: left;
+    font-size: 26px;
+}
+
+.functional{
+    transform: translate(-280px,0);
+    padding: 50px;
+    color: #fff;
+    font-size: 23px;
+    font-style: italic;
+}
+
+.content-katalog h2{
+    text-align: center;
+    color: #fff;
+    padding-bottom: 35px;
+}
+
+.custom-marker li::marker{
+    color: #ff0000;
+    
+}
+
+.container-trebo{
+    display: flex;
+    width: 1180px;
+    height: 90px;
+}
+
+.labels {
+    text-align: left;
+    padding-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.texts {
+    padding-left: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.button-end{
+    transform: translate(525px,0);
+    background: #682179;
+    font-family: 'Neometric';
+    box-shadow: 0px 10px 25px rgba(225, 29, 196, 0.4);
+    color: #ffffff;
+    border: none;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+            transition: all 0.8s ease; /* Время изменения цвета */
+}
+
+.p-white-cursive{
+    color: antiquewhite;
+    float: left;
+    font-style: italic;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.price-end{
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    transform: translate(450px,0);
+}
+
+.button-end:hover{
+    background-color: #450c49; /* Меняем цвет ссылки */
+}
+
+/*  */
+
+.container-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 430px;
+    width: 430px;
+    height: 430px;
+    background: #fff;
+    color: #000000;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
+  .container-form .registration{
+    display: none;
+  }
+  #check:checked ~ .registration{
+    display: block;
+  }
+  #check:checked ~ .login{
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  .container-form .form{
+    padding: 2rem;
+  }
+
+  .form header{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+   .form input{
+     height: 60px;
+     width: 100%;
+     padding: 0 15px;
+     font-size: 17px;
+     margin-bottom: 1.3rem;
+     border: 1px solid #ddd;
+     border-radius: 6px;
+     outline: none;
+   }
+   .form input:focus{
+     box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+   }
+  .form a{
+    font-size: 16px;
+    color: #009579;
+    text-decoration: none;
+  }
+  .form a:hover{
+    text-decoration: underline;
+  }
+  .form input.button{
+    color: #fff;
+    background: #009579;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .form input.button:hover{
+    background: #006653;
+  }
+  .signup{
+    font-size: 17px;
+    text-align: center;
+  }
+  .signup label{
+    color: #009579;
+    cursor: pointer;
+  }
+  .signup label:hover{
+    text-decoration: underline;
+  }
+
+/*  */
+
+/* Регистрация и вход */
+
+.mb-5 {
+    margin-top:7rem;
+    margin-bottom: 4rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.content-index p{
+    color: #fff;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mt-5 {
+    margin-top: 1rem !important;
+  }
+
+label {
+    display: inline-block;
+}
+
+.btn-outline-primary {
+    color: #ffffff;
+    border-color: #682179;
+    box-shadow: 0 0 0 0.15rem rgba(156, 12, 105, 0.5);
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+  
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #682179;
+    border-color: #682179;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+  }
+
+@media screen and (max-width: 1024px) {
+
+    .content-index{
+        padding: 135px 0px 0px 0px;
+    }
+
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .subtitle{
+        font-size: 1rem;
+    }
+
+    .popul-game{
+        padding: 30px;
+        width: 767px;
+        height: 80px;
+    }   
+
+    .whynot{
+        width: 767px;
+        height: 80px;
+    }
+
+    .whynot p{
+        font-size: 28px;
+    }
+
+    .popul-game p{
+        font-size: 28px;
+    }
+
+    .header__link{
+    font-size: 0.7rem;
+    }
+
+    .acor-container .acor-body, .acor-container label {
+        width: 700px;
+    }
+
+    .footer{
+        padding: 70px 0px 0px 0px;
+    }
+
+    .product-card {
+        display: flex;
+        flex: 1 0 150px;
+        width: 290px;
+        height: 350px;
+        border-radius: 5px;
+        margin: 20px;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    
+    .content-index{
+        padding: 125px 0px 0px 0px;
+    }
+
+    .content-faq{
+        padding: 100px 0px 0px 0px;
+    }
+    .content-faq p{
+        font-size: 30px;
+    }
+
+    .content-katalog{
+
+    }
+
+    .content-support{
+        padding: 85px 0px 0px 0px;
+    }
+
+    body.lock{
+        overflow: hidden;
+    }
+
+    .title{
+        font-size: 1.2rem;
+    }
+
+    .subtitle{
+        font-size: 0.8rem;
+    }
+
+    .header__link{
+        font-size: 24px;
+    }
+
+    .header__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+    
+    .header__body{
+        height: 50px;
+    }
+
+    .header__logo{
+        flex: 0 0 40px;
+    }
+
+    .header__burger span{
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        left: -px;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::before,
+    .header__burger::after{
+        content: '';
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::before{
+        top:0;
+    }
+    .header__burger::after{
+        bottom: 0;
+    }
+
+    .header__burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header__burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .header__burger.active span{
+        transform: scale(0);
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 1000%;
+        height: 100%;
+        overflow: auto;
+        background-color: #0c0c11;
+        padding: 70px 10px 20px 10px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__menu.active {
+        top: 0;
+    }
+
+    .header__list{
+        display: block;
+    }
+
+    .header__list li{
+        margin: 0px 0px 20px 0px
+    }
+
+    .contacts-box{
+        font-size: 20px;
+        margin: 0 auto;
+        width: 600px;
+        padding: 20px;
+    }
+
+    .popul-game{
+        padding: 25px;
+        width: 600px;
+        height: 70px;
+    }   
+
+    .whynot{
+        padding: 25px;
+        width: 600px;
+        height: 70px;
+    }
+
+    .product-card {
+        display: flex;
+        flex: 1 0 150px;
+        width: 290px;
+        height: 350px;
+        border-radius: 5px;
+        margin: 20px;
+    }
+
+    .acor-container .acor-body, .acor-container label {
+        width: 550px;
+    }
+
+    .footer{
+        padding: 35px 0px 0px 0px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .burger { display: flex }
+
+    .content-index{
+        padding: 100px 0px 0px 0px;
+    }
+
+    .acor-container .acor-body, .acor-container label {
+        width: 400px;
+    }
+    .content-faq h1{
+        font-size: 1.5rem;
+    }
+
+    .content-faq{
+        padding: 100px 0px 0px 0px;
+    }
+
+    .popul-game{
+        padding: 25px;
+        width: 425px;
+        height: 60px;
+    }   
+
+    .whynot{
+        padding: 25px;
+        width: 425px;
+        height: 60px;
+    }
+
+    .titile{
+        font-size: 0.5rem;
+    }
+
+    .nav{
+        display: none;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        animation: burgerAnimation 0.4s;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .title {
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .subtitle {
+        font-size: 0.7rem;
+        margin-bottom: 1.2rem;
+        text-align: center
+    }
+
+    .change-color-link{
+        padding: 20px 0px 20px 0px;
+        font-size: 17px;
+    }
+    
+    .typing-demo {
+        max-width: 260px;
+    }
+
+    .img-net{
+        height: 2rem;
+        padding: 0px 20px 0px 15px;
+    }
+
+    .contacts-box{
+        font-size: 20px;
+        margin: 0 auto;
+        width: 425px;
+        padding: 20px;
+    }
+
+    .networks{
+        width: 325px;
+    }
+
+    .footer{
+        padding: 50px 0px 0px 0px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 426px){
+
+    .container {
+        max-width: 450px;
+        max-width: 100%;
+        padding: 0px 10px;
+    }
+
+    body{
+        background-image: url(../img/fon.png);
+        background-repeat: repeat;
+        background-position: right 35% bottom 45%; 
+    }
+
+    .header__logo p{
+        font-size: 35px;
+    }
+
+    .title{
+        font-size: 0.7rem;
+    }
+
+    .subtitle{
+        font-size: 0.5rem;
+    }
+
+    .glass{
+        width: 320px;
+    }
+
+    .product-container{
+        max-width: 375px;
+    }
+
+    .content-faq p{
+        font-size: 25px;
+    }
+    
+    .acor-container label {
+        padding: 10px 15px;
+        max-width: 300px;
+    }
+
+    .popul-game{
+        padding: 15px;
+        width: 290px;
+        height: 50px;
+    }  
+
+    .whynot{
+        padding: 15px;
+        width: 290px;
+        height: 50px;
+    }
+
+    .btn{
+        margin-bottom: 10px;
+    }
+    .acor-container .acor-body {
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 321px) {
+
+    .networks{
+        width: 300px;
+    }
+
+    .contacts-box{
+        width: 300px;
+    }
+
+    .content-support p{
+        font-size: 30px;
+    }
+
+    .product-container{
+        max-width: 310px;
+    }
+
+    .container {
+        max-width: 300px;
+        margin: 0px auto;
+    }
+
+    .product-details{
+        width: 300px;
+    }
+
+    .glass{
+        width: 300px;
+    }
+
+    .product-card img {
+        width: 300px;
+        height: 280px;
+    }
+
+    .product-card p{
+        font-size: 23px;
+    }
+
+    .product-price{
+        font-size: 23px;
+    }
+
+    .buy-button{
+        font-size: 20px;
+    }
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-45px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@font-face {
+    font-family:"Extechchop Condensed";
+    src: url("../fonts/extechc.ttf");
+    font-weight:400;
+}
